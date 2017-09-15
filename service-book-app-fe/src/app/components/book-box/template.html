@@ -1,0 +1,24 @@
+<article class="component-book-box">
+    <div class="box-wrapper">
+        <!--<i class="icon like-icon icon-icon-star-outline"></i>-->
+        <!--<i class="icon liked-icon icon-icon-star"></i>-->
+
+        <a class="hoverLikedIcon">
+            <i class="icon like-icon icon-icon-star-outline"></i>
+            <i class="icon liked-icon icon-icon-star"></i>
+        </a>
+
+        <h4 class="title">{{$ctrl.book.bookTitle}}</h4>
+        <div class="description">{{$ctrl.book.bookDescription}}</div>
+
+    </div>
+
+    <a class="download cursor" href="../add-books-form/template.html" download="bookDownload.pdf"><i
+            class="icon icon-icon-download"></i>Download
+        Book</a>
+
+    <a class="delete cursor" ng-click="$ctrl.confirmationForm()"><i class="icon delete-icon icon-icon-delete"></i>Delete
+        Book</a>
+
+</article>
+

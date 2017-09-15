@@ -1,0 +1,146 @@
+nh-input {
+  $border-radius: 0.6rem;
+  $input-height: 3.6rem;
+
+  display: block;
+  width: 100%;
+  min-width: 16rem;
+  max-width: 32rem;
+  color: $lavender;
+
+  .label {
+    font-weight: $light;
+    font-size: 1.3rem;
+    color: $rock-blue;
+    width: inherit;
+    display: block;
+  }
+
+  .input {
+    height: $input-height;
+  }
+
+
+  .progress-box {
+    background: $lavender;
+    border-radius: $border-radius;
+    width: 100%;
+    height: $input-height;
+
+    .progress-bar {
+      width: 75%;
+      background: $grey;
+      border: 1px solid $grey;
+      box-shadow: 0 0 0.2rem #D5D4D4 inset;
+      position: relative;
+      display: inline-block;
+      border-radius: 10rem;
+      height: 1.2rem;
+      margin: 1.3rem 1rem 0.3rem 1rem;
+      .inner {
+        height: 100%;
+        width: 0;
+        transition: all 1s ease-out;
+        position: relative;
+        background: $green;
+      }
+    }
+
+    .percentage-cur {
+      display: inline-block;
+      margin-top: 0.8rem;
+      .num {
+        font-weight: $bold;
+        font-size: 1.4rem;
+      }
+    }
+
+    .progress-bar-slider {
+      .progress-slider {
+        opacity: 0;
+        width: 100%;
+        height: 1.5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        z-index: 1;
+      }
+
+      .inner {
+        transition: none;
+        &::after {
+          content: " ";
+          width: 0.5rem;
+          height: 1.4rem;
+          background-color: #ccc;
+          position: absolute;
+          right: -0.2rem;
+          top: -0.2rem;
+          border: 0.1rem solid #bbb;
+          border-radius: 0.2rem;
+          box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.3);
+          margin: 0;
+        }
+      }
+    }
+  }
+
+
+  .input {
+    width: inherit; 
+    background-color: $dark-green;
+    border-radius: $border-radius;
+    border: none;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: $medium;
+    text-align: center;
+    outline: none;
+
+    @include placeholder {
+      color: $lavender;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0.8rem 1.5rem 0 lighten($dark-grey, 50%);
+
+      @include placeholder {
+        color: transparent !important;
+      }
+    }
+
+    &.error {
+      box-shadow: 0 1.2rem 3.8rem -0.5rem $red !important;
+    }
+  }
+
+  .error-message-bubble {
+    margin: 1.2rem auto 0;
+    width: 80%;
+    font-size: 1.3rem;
+    text-align: center;
+    border-radius: 1.6rem;
+    background-color: $red;
+    color: $white;
+    padding: 0.5rem;
+    
+    &::before {
+      $height: 1.6rem;
+      $border: $height/2;
+
+      display: block;
+      content: '';
+      width: 0;
+      position: absolute;
+      margin: -$height auto 0 $height;
+      
+      border-bottom: $height solid $red;
+      border-left: $border solid transparent;
+      border-right: $border solid transparent;
+    }
+  }
+
+}
+

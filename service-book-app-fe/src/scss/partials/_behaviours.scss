@@ -1,0 +1,146 @@
+body,
+html {
+  color: $dark-grey;
+}
+
+@media print {
+  .noprint {
+    display: none;
+  }
+  .learning-sessions{
+    page-break-before: always;
+  }
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+p {
+  color: $white;
+  font-size: 1.4em;
+  letter-spacing: 0.39px;
+}
+
+a,
+a:focus,
+a:visited {
+  color: $dark-purple;
+  text-decoration: none;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  &:hover,
+  &:active {
+    color: $lavender;
+    text-decoration: none;
+  }
+}
+
+.white {
+  color: $white;
+  &:focus,
+  &:visited {
+    color: $white;
+  }
+}
+
+.blue {
+  color: $blue;
+  &:focus,
+  &:visited {
+    color: $blue;
+  }
+}
+
+.green {
+  color: $teal;
+  &:focus,
+  &:visited {
+    color: $teal;
+  }
+}
+
+.red {
+  color: $red;
+  &:focus,
+  &:visited {
+    color: $red;
+  }
+}
+
+.light-grey {
+  color: $light-grey;
+  &:focus,
+  &:visited {
+    color: $light-grey;
+  }
+}
+
+.charcoal {
+  color: $charcoal;
+  &:focus,
+  &:visited {
+    color: $charcoal;
+  }
+}
+
+.teal {
+  color: $teal;
+  &:focus,
+  &:visited {
+    color: $teal;
+  }
+}
+
+.lavender {
+  color: $lavender;
+  &:focus,
+  &:visited {
+    color: $lavender;
+  }
+}
+
+.dark-grey {
+  color: $dark-grey;
+  &:focus,
+  &:visited {
+    color: $dark-grey;
+  }
+}
+
+.rock-blue {
+  color: $rock_blue;
+  &:focus,
+  &:visited {
+    color: $rock_blue;
+  }
+}
+
+.light {
+  font-weight: $light;
+}
+
+.regular {
+  font-weight: $regular;
+}
+
+.medium {
+  font-weight: $medium;
+}
+
+.bold {
+  font-weight: $bold;
+}
+
+.extra-bold {
+  font-weight: $extrabold;
+}

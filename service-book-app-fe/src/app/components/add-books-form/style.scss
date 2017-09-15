@@ -1,0 +1,86 @@
+add-books-form {
+  background: $white;
+  box-shadow: 0 1rem 2.4rem 0 $charcoal;
+  border-radius: 0.6rem;
+  width: 60rem;
+  height: 100%;
+
+  .add-book-form {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+
+    .book-title {
+      margin-left: -47%;
+      margin-top: -2rem;
+      width: 90%;
+    }
+    .book-description {
+      margin-left: 61%;
+      margin-top: -9.2rem;
+      width: 90%;
+    }
+    nh-input {
+      margin-bottom: 2.5rem;
+      .label {
+        font-family: "icomoon", "Roboto", sans-serif;
+      }
+    }
+
+    .fileUpload {
+      margin-bottom: 0 !important;
+    }
+
+  }
+
+  .title {
+    font-weight: $bold;
+    font-size: 3.6rem;
+    color: $dark-yellow;
+    text-align: center;
+    margin: 0 9rem;
+    padding: 3rem 0 2rem 0;
+    z-index: 1;
+    position: relative;
+  }
+  .image {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+  }
+  .file {
+    height: 2rem;
+  }
+  .label {
+    display: block;
+    font-weight: $bold;
+    font-size: 1.8rem;
+    color: $dark-yellow;
+  }
+  nh-button {
+    width: 20rem;
+    display: initial;
+    button {
+      margin: 4rem 0 6rem 0;
+    }
+  }
+  .close-button {
+    float: right;
+    margin: 3rem;
+    font-size: 2.4rem;
+    color: $yellow;
+    background: transparent;
+    border: none;
+    outline: none;
+    z-index: 1;
+    position: relative;
+  }
+
+  .close-button:hover, .clear-button:active, .clear-button:focus {
+    outline: none;
+    color: $dark-yellow;
+  }
+}

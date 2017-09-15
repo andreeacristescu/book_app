@@ -1,0 +1,15 @@
+<div class="component-confirmation-form">
+    <button class="close-button" type="button" ng-click="$ctrl.dismiss()">&times;</button>
+
+    <h1 class="title charcoal">{{$ctrl.text}}</h1>
+
+    <div class="buttons">
+        <nh-button theme="dark-purple" on-click="$ctrl.removeBook()">
+            {{$ctrl.confirmText}}
+        </nh-button>
+
+        <nh-button theme="dark-yellow" on-click="$ctrl.dismiss()">
+            {{$ctrl.cancelText}}
+        </nh-button>
+    </div>
+</div>

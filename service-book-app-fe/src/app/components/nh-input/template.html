@@ -1,0 +1,55 @@
+<label nh-show="$ctrl.label" class="label" for="{{$ctrl.inputId}}">
+    {{$ctrl.label}}
+
+    <i ng-if="$ctrl.type == 'progress-slider'" class="rock-blue icon-info_icon" title="{{$ctrl.placeholder}}"></i>
+</label>
+
+<input
+        ng-if="$ctrl.type == 'text' || $ctrl.type == 'password' || $ctrl.type == 'email'"
+        class="input"
+        ng-class="{'error': $ctrl.error}"
+        type="{{$ctrl.type}}"
+        id="{{$ctrl.inputId}}"
+        name="{{$ctrl.inputId}}"
+        placeholder="{{$ctrl.placeholder}}"
+        ng-model="$ctrl.bind"
+        ng-change="$ctrl.resetError()"/>
+
+<input
+        ng-if="$ctrl.type == 'file'"
+        class="input"
+        style="visibility: hidden"
+        ng-class="{'error': $ctrl.error}"
+        type="file"
+        id="{{$ctrl.inputId}}"
+        name="{{$ctrl.inputId}}"
+        accept="{{$ctrl.accept"
+        placeholder="{{$ctrl.placeholder}}"
+        multiple="false"
+        nh-file="$ctrl.bind"
+        nh-file-preview="$ctrl.bindPreview"/>
+
+
+<div ng-if="$ctrl.type == 'progress-slider'"
+     class="progress-box">
+
+    <div class="percentage-cur">
+        <span class="num rock-blue">{{ $ctrl.bind }}%</span>
+    </div>
+
+    <div class="progress-bar progress-bar-slider">
+        <input
+            id="{{$ctrl.inputId}}"
+            name="{{$ctrl.inputId}}"
+            class="progress-slider"
+            type="range"
+            min="0" max="100"
+            ng-model="$ctrl.bind"
+            ng-change="$ctrl.resetError()">
+        <div class="inner" ng-style="{ width: $ctrl.bind + '%' || '0%' }"></div>
+    </div>
+
+</div>
+
+
+<div class="error-message-bubble" ng-show="$ctrl.error">{{$ctrl.error}}</div>

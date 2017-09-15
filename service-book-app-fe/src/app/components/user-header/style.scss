@@ -1,0 +1,81 @@
+.component-user-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+  background: white;
+  border-bottom: 1px solid $light-grey;
+  z-index: 1003;
+  font-size: 1.3rem;
+
+  .link {
+    font-size: 1.4rem;
+    font-weight: $bold;
+    text-decoration: none;
+    float: left;
+    &:hover {
+      color: $dark-purple;
+    }
+    .logo {
+      font-size: 6rem;
+      padding: 0 2rem 0 5rem;
+    }
+  }
+
+  .navigation-filters {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    margin-top: -2rem;
+    .title {
+      float: left;
+      margin-bottom: 0;
+      vertical-align: middle;
+      height: 4rem;
+      margin-right: 2rem;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $dark-yellow;
+      &.active,
+      &:hover {
+        font-weight: $bold;
+        font-size: 1.7rem;
+        border-bottom: 2px solid $dark-purple;
+      }
+    }
+  }
+
+  .user-menu-wrapper {
+    .div {
+      position: relative;
+      display: inline-block;
+      margin: 1rem 3rem 0 0;
+      .span {
+        padding-left: 1rem;
+        max-width: 135px;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: middle;
+      }
+      .username {
+        border-right: 0.2rem solid $dark-purple;
+        padding-right: 1rem;
+      }
+      .signout {
+        &:hover {
+          color: $dark-green;
+        }
+      }
+      .image {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-right: 1rem;
+      }
+    }
+  }
+}

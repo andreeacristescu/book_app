@@ -1,0 +1,37 @@
+<div class="component-user-header noprint">
+    <a class="link cursor" href="/">
+        <i class="logo icon-books"></i>
+    </a>
+    <div class="navigation-filters">
+        <!--<h1 class="title white uppercase cursor"-->
+            <!--ng-show="$ctrl.countBooks('allBooks')"-->
+            <!--ng-click="$ctrl.selectFilter('allBooks')"-->
+            <!--ng-class="{'active': $ctrl.selectedFilter == 'allBooks'}">-->
+            <!--all books ({{$ctrl.countBooks('allBooks')}})</h1>-->
+
+        <!--<h1 class="title white uppercase cursor"-->
+            <!--ng-show="$ctrl.countBooks('myBooks')"-->
+            <!--ng-click="$ctrl.selectFilter('myBooks')"-->
+            <!--ng-class="{'active': $ctrl.selectedFilter == 'myBooks'}">-->
+            <!--my library ({{$ctrl.countBooks('myBooks')}})</h1>-->
+
+        <!--<h1 class="title white uppercase cursor"-->
+            <!--ng-show="$ctrl.countBooks('uploadedBooks')"-->
+            <!--ng-click="$ctrl.selectFilter('uploadedBooks')"-->
+            <!--ng-class="{'active': $ctrl.selectedFilter == 'uploadedBooks'}">-->
+            <!--uploads ({{$ctrl.countBooks('uploadedBooks')}})</h1>-->
+
+        <h1 class="title uppercase cursor">all books</h1>
+
+        <h1 class="title uppercase cursor">my library</h1>
+
+        <h1 class="title uppercase cursor">uploads</h1>
+    </div>
+    <div class="pull-right user-menu-wrapper">
+        <div class="cursor div">
+            <img class="image" ng-src="{{$ctrl.currentUser.ImageUrl}}">
+            <span class="span cursor username">{{$ctrl.currentUser.Name}}</span>
+            <span class="span cursor signout" ng-click="$ctrl.signOut()">Sign out</span>
+        </div>
+    </div>
+</div>

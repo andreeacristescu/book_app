@@ -1,0 +1,162 @@
+.page-homepage {
+  background-image: url("/images/homepage_background_image.png");
+  height: 100%;
+  background-size: cover;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    //background: linear-gradient(to right, #2d2337 0%,#837587 100%);
+    background: white;
+    opacity: .6;
+  }
+  .books-listing {
+    padding-bottom: 4rem;
+    max-width: 125rem;
+    margin: 0 auto;
+    position: relative;
+
+    .homepage-header {
+      width: 100%;
+      padding: 5rem 0 10rem 0;
+      .create-book {
+        margin-right: -44%;
+        margin-top: -2%;
+        position: absolute;
+        right: 50%;
+        font-size: 2rem;
+        color: $dark-yellow;
+        &:hover {
+          color: $dark-purple;
+        }
+        .icon {
+          padding-right: 1rem;
+        }
+      }
+      nh-search-input {
+        float: right;
+        margin-top: 1rem;
+        padding: 1rem 4rem 1rem 5rem;
+        font-size: 1.4rem;
+        color: $red;
+        font-weight: $bold;
+        border-radius: 1rem;
+      }
+    }
+
+    .empty-list {
+      text-align: center;
+      margin: 6rem auto;
+
+      .image {
+        display: block;
+        margin: 0 auto;
+        width: 40rem;
+        height: 40rem;
+      }
+      .paragraph {
+        font-size: 1.8rem;
+        text-align: center;
+        padding: 2rem;
+        color: $dark-purple;
+      }
+      nh-button {
+        width: 15.2rem;
+        margin: 0 auto;
+      }
+    }
+
+    .not-empty-list {
+      &::after {
+        display: table;
+        clear: both;
+        content: '';
+      }
+
+      .book-list {
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        //width: 100%;
+        book-box {
+          border-top-right-radius: 1rem;
+          border-top-left-radius: 1rem;
+          width: 28rem;
+          height: 24rem;
+          margin: 1.3rem;
+
+          //.component-book-box {
+          //  .box-top {
+          //    opacity: 0.9;
+          //    border-top-left-radius: 0.8rem;
+          //    border-top-right-radius: 0.8em;
+          //    //background-image: linear-gradient(180deg, lighten($purple, 20%) 2%, $purple);
+          //    background: linear-gradient(to bottom, rgba(187, 165, 209, 1) 0%, rgba(135, 126, 210, 1) 99%);
+          //    height: 10rem;
+          //    display: flex;
+          //    flex-wrap: wrap;
+          //    align-items: center;
+          //    .title {
+          //      color: $light-grey;
+          //      font-weight: $bold;
+          //      padding: 2rem 3rem;
+          //      margin: 0;
+          //      text-align: left;
+          //      vertical-align: middle;
+          //      height: initial;
+          //    }
+          //  }
+          //  .box-bottom {
+          //  }
+          //}
+        }
+      }
+
+      .books-pagination {
+        text-align: center;
+        margin: 5rem auto 4rem;
+        .pagination {
+          display: inline-block;
+          padding: 0;
+          margin: 0;
+        }
+        .pagination > .disabled > a {
+          color: $rock-blue;
+          &:hover {
+            background: $white;
+          }
+        }
+        .pagination-sm > li:first-child > a,
+        .pagination-sm > li:last-child > a {
+          margin: auto 2rem;
+          padding: 0.6rem;
+          border: 2px solid $dark-purple;
+          width: 8rem;
+        }
+        .pagination-sm > li > a {
+          color: $dark-yellow;
+          background-color: $white;
+          padding: 0.8rem 1.6rem;
+          font-size: 1.3rem;
+          text-decoration: none;
+          transition: background-color .3s;
+          border: none;
+          outline: none;
+          &:hover {
+            background-color: $lavender;
+          }
+        }
+        .pagination > .active > a {
+          background: $dark-purple;
+          color: $dark-yellow;
+          &:hover {
+            background-color: $dark-purple;
+          }
+        }
+      }
+    }
+  }
+}

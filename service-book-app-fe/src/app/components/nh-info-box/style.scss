@@ -1,0 +1,37 @@
+nh-info-box {
+  display: block;
+  width: 100%;
+
+  .box {     
+      width: 100%;
+  
+      &.error-message {
+        background-color: $red;
+        box-shadow: 0 0.1rem 0.8rem 0 darken($red, 6%);
+      }
+
+      &.success-message {
+        background-color: $teal;
+        box-shadow: 0 0.1rem 0.8rem 0 darken($teal, 6%);
+      }
+      
+      &.info-message {
+        background-color: $rock-blue;
+        box-shadow: 0 0.1rem 0.8rem 0 darken($rock-blue, 6%);
+      }
+      
+      &.warning-message {
+        background-color: $yellow;
+        box-shadow: 0 0.1rem 0.8rem 0 darken($yellow, 6%);
+      }
+      
+      .message {
+        font-weight: $bold;
+        color: $white;
+        text-align: center;
+        font-size: 1.8rem;
+        margin: 1rem;
+        border-radius: .6rem;
+      }
+  }
+}

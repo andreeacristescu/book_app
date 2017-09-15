@@ -1,0 +1,43 @@
+confirmation-form {
+  display: block;
+  background: $white;
+  box-shadow: 0 1rem 2.4rem 0 $charcoal;
+  border-radius: 0.6rem;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+
+  .close-button {
+    float: right;
+    margin: 3rem;
+    font-size: 2.4rem;
+    color: $light-grey;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+
+  .close-button:hover, .clear-button:active, .clear-button:focus {
+    outline: none;
+    color: $grey;
+  }
+
+  .title {
+    display: block;
+    width: 70%;
+    font-weight: $bold;
+    font-size: 3.6rem;
+    color: $dark-yellow;
+    text-align: center;
+    margin: 0 9rem;
+    padding: 3rem 0 2rem 0;
+  }
+
+  .buttons {
+    display: -webkit-box;
+    padding: 5rem;
+    nh-button {
+      padding: 2rem;
+    }
+  }
+}

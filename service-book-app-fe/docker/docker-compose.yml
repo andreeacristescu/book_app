@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  website:
+    image: mentorina/service-teacher-portal-fe:latest
+    tty: true
+    environment:
+      NODE_ENV: dev
+    ports:
+      - "80:80"
+    volumes:
+      - ../build:/usr/share/nginx/html

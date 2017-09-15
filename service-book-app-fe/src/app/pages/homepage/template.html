@@ -1,0 +1,35 @@
+<div class="page-homepage">
+    <div class="books-listing">
+
+
+        <div class="homepage-header">
+            <a class="cursor white create-book" ng-click="$ctrl.addNewBook()"><i class="icon icon-icon-add"></i>Add new
+                book</a>
+            <nh-search-input id="myLibrarySearch" placeholder="Search" bind="$ctrl.searchTerm"></nh-search-input>
+        </div>
+
+        <div class="empty-list" ng-hide="$ctrl.booksList.length">
+            <img class="image" ng-src="/images/empty_state.png">
+            <p class="paragraph">There are no books in your library yet, please add some.</p>
+        </div>
+
+        <div class="not-empty-list" ng-if="$ctrl.booksList.length != 0">
+            <div class="book-list">
+                <book-box ng-repeat="book in $ctrl.booksList track by $index" book="book"></book-box>
+            </div>
+
+            <div class="books-pagination">
+                <ul ng-show="$ctrl.noOfBooks > $ctrl.itemsPerPage"
+                    uib-pagination
+                    total-items="$ctrl.noOfBooks"
+                    ng-model="$ctrl.currentPage"
+                    items-per-page="$ctrl.itemsPerPage"
+                    max-size="8"
+                    class="pagination-sm"
+                    boundary-link-numbers="true">
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>

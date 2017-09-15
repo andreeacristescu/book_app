@@ -1,0 +1,12 @@
+branch-defaults:
+  production:
+    environment: teacher-portal-fe-prod
+  qa:
+    environment: teacher-portal-fe-qa
+global:
+  application_name: service-teacher-portal-fe
+  default_ec2_keyname: mentorina-eb-qa
+  default_platform: Docker 1.11.2
+  default_region: us-east-1
+  profile: eb-cli
+  sc: git

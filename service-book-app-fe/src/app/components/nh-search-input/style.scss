@@ -1,0 +1,33 @@
+nh-search-input {
+  padding: 1rem 4rem 0 5rem;
+  .nh-search-input-wrapper {
+    .search-icon{
+      background-color: $dark-purple;
+      margin-left: 10rem;
+    }
+    input {
+      min-width: 20rem;
+      min-height: 3rem;
+      padding: 0 2rem;
+      background-color: $dark-purple;
+      outline: none;
+      border: none;
+      border-radius:30px;
+      font-weight: $regular;
+      font-size: 1.4rem;
+      text-align:center;
+      color: $rock-blue;
+      @include placeholder {
+        font-family: "Roboto", "icomoon", sans-serif;
+        color: $lavender;
+      }
+      &:focus {
+        outline: none;
+        box-shadow: 1rem 1rem 2.9rem 0 rgba(45,35,55,0.29);
+        @include placeholder {
+          color: transparent !important;
+        }
+      }
+    }
+  }
+}

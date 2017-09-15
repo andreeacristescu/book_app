@@ -1,0 +1,114 @@
+book-box {
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 1rem 2.4rem 0 rgba(0, 39, 52, 0.18);
+  border-radius: 0.4rem;
+  width: 30rem;
+  height: 25rem;
+  font-size: 1.2rem;
+  background: white;
+
+  .component-book-box {
+    height: 100%;
+    position: relative;
+
+    .download {
+      text-align: center;
+      display: block;
+      font-weight: $bold;
+      padding: 1rem;
+      color: $dark-brown;
+      margin: 0 auto;
+      position: absolute;
+      &:hover {
+        color: $dark-green;
+      }
+      .icon {
+        padding-right: 1rem;
+        font-size: 1.5rem;
+        font-weight: $bold;
+      }
+    }
+
+    .delete {
+      color: $red;
+      font-weight: $bold;
+      position: absolute;
+      top: 50%;
+      margin: 32% 59%;
+      text-align: center;
+      width: 40%;
+      .delete-icon {
+        padding-right: 1rem;
+        font-size: 1.5rem;
+        font-weight: $bold;
+      }
+    }
+
+    .box-wrapper {
+      background-color: $dark-purple;
+      border-top-right-radius: 1rem;
+      border-top-left-radius: 1rem;
+      position: relative;
+      height: 20rem;
+
+      .hoverLikedIcon {
+        position: relative;
+        z-index: 1;
+        .liked-icon {
+          position: absolute;
+          color: $dark-yellow;
+          margin-left: -1.5rem;
+          left: 50%;
+          top: 50%;
+          margin-top: -1rem;
+          font-size: 3.1rem;
+        }
+        .like-icon {
+          position: absolute;
+          color: $dark-yellow;
+          margin-left: -1.5rem;
+          left: 50%;
+          top: 50%;
+          margin-top: -1rem;
+          font-size: 3.1rem;
+        }
+        .liked-icon {
+          display: none;
+        }
+        &:active,
+        &:hover {
+          .like-icon {
+            display: none;
+          }
+        }
+        &:active,
+        &:hover {
+          .liked-icon {
+            display: block;
+          }
+        }
+      }
+
+      .title {
+        font-weight: $bold;
+        font-size: 2rem;
+        color: white;
+        text-align: center;
+        padding: 1em;
+        z-index: 1;
+        position: relative;
+        border-bottom: 2px solid $lavender;
+        margin: 0 auto;
+        width: 90%;
+      }
+      .description {
+        padding: 2rem;
+        color: white;
+        text-align: center;
+        z-index: 1;
+        position: relative;
+        font-weight: $bold;
+      }
+    }
+  }
+}

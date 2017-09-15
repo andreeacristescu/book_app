@@ -1,0 +1,12 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Image": {
+//        "Name": "878692351502.dkr.ecr.us-east-1.amazonaws.com/service-teacher-portal-fe:latest",
+        "Update": "true"
+    },
+    "Ports": [{
+        "ContainerPort": "80",
+        "HostPort": "80"
+    }],
+    "Logging": "/var/log/service-teacher-portal-fe"
+}

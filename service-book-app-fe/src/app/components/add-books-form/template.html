@@ -1,0 +1,56 @@
+<div class="component-add-books-form">
+    <button class="close-button" type="button" ng-click="$ctrl.dismiss()">&times;</button>
+    <img ng-src="/images/add_book_cover.png" class="image">
+    <h1 class="title">Add Book</h1>
+
+    <form method="post" class="add-book-form" name="form">
+
+        <nh-info-box type="error" ng-if="$ctrl.errors.general">
+            {{$ctrl.errors.general}}
+        </nh-info-box>
+
+
+        <div class="image-wrapper">
+
+
+            <input type="file" id="files" name="files[]" multiple/>
+            <output id="list"></output>
+
+            <!--<nh-input class="fileUpload"-->
+            <!--label="&#xe909; Upload Book"-->
+            <!--type="file"-->
+            <!--name="fileUpload"-->
+            <!--accept="image/*"-->
+            <!--bind="$ctrl.upload"-->
+            <!--input-id="bannerImg">-->
+            <!--</nh-input>-->
+            <!--<img ng-src="" id="tableBanner"/>-->
+            <!--<div id="res"></div>-->
+
+            <!--<img src="" id="uploadedImage"/>-->
+
+        </div>
+
+        <nh-input class="book-title"
+                  label="Book Title"
+                  type="text"
+                  input-id="bookTitle"
+                  bind="$ctrl.title"
+                  placeholder="Add a Book Title"
+                  error="$ctrl.errors.name">
+        </nh-input>
+
+        <nh-input class="book-description"
+                  label="Book Description"
+                  type="text"
+                  input-id="bookDescription"
+                  bind="$ctrl.description"
+                  placeholder="Add a Book Description"
+                  error="$ctrl.errors.name">
+        </nh-input>
+
+        <nh-button theme="dark-purple" on-click="$ctrl.addBook()">
+            Add book
+        </nh-button>
+    </form>
+</div>

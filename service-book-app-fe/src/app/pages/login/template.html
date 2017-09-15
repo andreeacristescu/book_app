@@ -1,0 +1,37 @@
+<div class="page-login">
+    <header class="login-header">
+        <a class="link cursor" href="/">
+            <i class="logo icon-books"></i>
+            <span class="span">Book Management</span>
+        </a>
+    </header>
+
+    <h1 class="title uppercase white cursor">Sign In</h1>
+
+    <div class="div first-row">
+        <i class="icon icon-icon-book1"></i>
+        <i class="icon icon-icon-book2"></i>
+        <i class="icon icon-icon-book3"></i>
+    </div>
+    <div class="div second-row">
+        <i class="icon icon-icon-book4"></i>
+        <i class="icon icon-icon-book5"></i>
+        <i class="icon icon-icon-book6"></i>
+    </div>
+
+
+    <span id="googleSignIn">
+        <span id="signInButton"></span>
+    </span>
+
+    <script>
+        (function () {
+            let po = document.createElement('script');
+            po.type = 'text/javascript';
+            po.async = true;
+            po.src = 'https://apis.google.com/js/client:plusone.js';
+            let s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+</div>
